@@ -42,8 +42,8 @@ nnoremap <silent> mc :%s/@+/             " Global Substitute Clipboard
 nnoremap <silent> mC :%S/@+/             " Global Subvert Clipboard
 nnoremap <silent> mp :put<CR>            " Paste On New Line Below
 nnoremap <silent> mP :put!<CR>           " Paste On New Line Above
-nnoremap <silent> <leader>\ :call <SID>tmuxSplitVertical()<CR>   " New Vertical Tmux Pane At Buffer CWD
-nnoremap <silent> <leader>| :call <SID>tmuxSplitHorizontal()<CR> " New Horizontal Tmux Pane At Buffer CWD
+" nnoremap <silent> <leader>\ :call <SID>tmuxSplitVertical()<CR>   " New Vertical Tmux Pane At Buffer CWD
+" nnoremap <silent> <leader>| :call <SID>tmuxSplitHorizontal()<CR> " New Horizontal Tmux Pane At Buffer CWD
 nnoremap <silent> <Leader>Ay ggVGy     " Yank All
 nnoremap <silent> <Leader>Ad ggVGd     " Delete All
 nnoremap <silent> <Leader>Av ggVG      " Select All

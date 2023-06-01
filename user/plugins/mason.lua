@@ -54,7 +54,6 @@ return {
 			require("mason.null-ls").setup({
 				ensure_installed = {
 					"black",
-					"google_java_format",
 					"eslint_d",
 					"flake8",
 					"hadolint",
@@ -78,11 +77,7 @@ return {
 		branch = "func_or_extend",
 		opts = {
 			ensure_installed = {
-				"delve",
 				"js",
-				"python",
-				"javadbg",
-				"javatest",
 			},
 		},
 	},

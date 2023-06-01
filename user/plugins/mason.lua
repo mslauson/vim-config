@@ -8,7 +8,6 @@ return {
 				"golines",
 				"gotests",
 				"gitsigns",
-				"chrome-debug-adapter",
 				"impl",
 				"json-to-struct",
 				"sonarlint-language-server",
@@ -18,7 +17,9 @@ return {
 				"eslint_d",
 				"prettierd",
 				"solidity",
-				"stylelint"
+				"stylelint",
+				"yq",
+				"xq",
 			},
 			auto_update = true,
 			run_on_start = false,
@@ -28,7 +29,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
 			ensure_installed = {
-				"ansiblels",
 				"cssls",
 				"dockerls",
 				"gopls",
@@ -43,7 +43,8 @@ return {
 				"stylelint_lsp",
 				"tsserver",
 				"vimls",
-				"vtsls"
+				"vtsls",
+				"yamlls"
 			},
 		},
 	},

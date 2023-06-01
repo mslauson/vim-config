@@ -65,7 +65,8 @@ return {
 					null_ls.builtins.formatting.sqlformat,
 					null_ls.builtins.formatting.stylelint,
 					null_ls.builtins.formatting.xmllint,
-					null_ls.builtins.formatting.yamlfix,
+					null_ls.builtins.formatting.xq,
+					null_ls.builtins.formatting.yq,
 				},
 			})
 		end,

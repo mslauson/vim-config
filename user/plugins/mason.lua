@@ -42,6 +42,8 @@ return {
 				"lua_ls",
 				"stylelint_lsp",
 				"tsserver",
+				"vimls",
+				"vtsls"
 			},
 		},
 	},

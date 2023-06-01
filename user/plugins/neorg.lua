@@ -19,11 +19,11 @@ return {
 					["core.dirman"] = { -- Manages Neorg workspaces
 						config = {
 							workspaces = {
-								notes = "~/notes/general",
+								notes = "~/notes/personal",
 								secretTime = "~/notes/secretTime",
 								work = "~/notes/work",
 							},
-							default_workspace = "notes",
+							default_workspace = "work",
 						},
 					},
 				},

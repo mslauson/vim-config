@@ -10,6 +10,7 @@ return {
 				"gitsigns",
 				"impl",
 				"json-to-struct",
+				"jq",
 				"sonarlint-language-server",
 				"luacheck",
 				"pyright",

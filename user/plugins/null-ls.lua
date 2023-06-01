@@ -53,6 +53,7 @@ return {
 					null_ls.builtins.formatting.golines,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.goimports,
+					null_ls.builtins.formatting.jq,
 					null_ls.builtins.formatting.ktlint,
 					null_ls.builtins.formatting.markdownlint,
 					null_ls.builtins.formatting.markdown_toc,

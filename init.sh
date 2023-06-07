@@ -10,7 +10,7 @@ select yn in "Yes" "No" "Cancel"; do
             
             
             sudo git clone --depth 1 https://github.com/AstroNvim/AstroNvim /root/.config/nvim
-            ln -s "$currentPath"/user /root/.config/nvim/lua/user
+            sudo ln -s "$currentPath"/user /root/.config/nvim/lua/user
             sudo ln -s "$CurrentPath"/vimrc /root/.vimrc
             break;;
         No )

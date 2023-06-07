@@ -5,13 +5,13 @@ select yn in "Yes" "No" "Cancel"; do
     case $yn in
         Yes ) 
             echo "Initializing for root and $USER"
-            sudo rm -rf /home/root/.config/nvim
-            sudo rm -rf /home/root/.vimrc
+            sudo rm -rf /root/.config/nvim
+            sudo rm -rf /root/.vimrc
             
             
-            sudo git clone --depth 1 https://github.com/AstroNvim/AstroNvim /home/root/.config/nvim
-            ln -s "$currentPath"/user /home/root/.config/nvim/lua/user
-            sudo ln -s "$CurrentPath"/vimrc /home/root/.vimrc
+            sudo git clone --depth 1 https://github.com/AstroNvim/AstroNvim /root/.config/nvim
+            ln -s "$currentPath"/user /root/.config/nvim/lua/user
+            sudo ln -s "$CurrentPath"/vimrc /root/.vimrc
             break;;
         No )
             echo "Initializing for $USER"

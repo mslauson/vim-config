@@ -2,6 +2,7 @@ return {
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		build = ":MasonToolsUpdate",
+		enabled=false,
 		opts = {
 			ensure_installed = {
 				"gofumpt",
@@ -28,6 +29,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		enabled=false,
 		opts = {
 			ensure_installed = {
 				"cssls",

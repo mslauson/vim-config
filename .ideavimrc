@@ -11,6 +11,7 @@
 source ~/.vimrc
 
 set ideamarks=true
+set clipboard+=unnamed
 " extensions
 set surround
 set multiple-cursors
@@ -18,12 +19,15 @@ set highlightedyank
 set NERDTree
 set argtextobj
 set which-key
+set sneak
 
 
 Plug 'preservim/nerdtree'
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 nnoremap <leader>e :NERDTreeFocus<CR>
+let g:WhichKeyDesc_nerdTreeFocus = "<leader>e Nerd Tree Focus"
 nnoremap <C-n> :NERDTree<CR>
+let g:WhichKeyDesc_nerdTreeFocus = "<leader>e Nerd Tree Focus"
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
@@ -37,28 +41,51 @@ nnoremap ]d <Action>(GotoNextError)
 nnoremap [d <Action>(GotoPreviousError)
 
 "" Map <leader>d to start debug
-map <leader>dc <Action>(Debug)
+let g:WhichKeyDesc_debug = "<leader>d Debug"
+
+
+:map <leader>dc <Action>(ChooseDebugConfiguration)
+let g:WhichKeyDesc_debugContinue = "<leader>dc Debug Choose Config"
+
+map <leader>ds <Action>(Debug)
+let g:WhichKeyDesc_debugContinue = "<leader>ds Debug Start"
 
 "" Map \b to toggle the breakpoint on the current line
 map <leader>db <Action>(ToggleLineBreakpoint)
+let g:WhichKeyDesc_toggleBreakpoint = "<leader>db Toggle Breakpoint"
+
+  :map <leader>dv <Action>(ViewBreakpoints)
+let g:WhichKeyDesc_viewBp = "<leader>dv View Breakpoints"
+
+  :map <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
+let g:WhichKeyDesc_removeBp = "<leader>dR Remove All Breakpoints"
 
 " code Refactoring
+let g:WhichKeyDesc_refactor = "<leader>c Code Refactoring"
+
 :map <leader>cr <Action>(RenameElement)
+let g:WhichKeyDesc_rename = "<leader>cr  Rename"
+
 :map <leader>cR <Action>(Refactorings.QuickListPopupAction)
+let g:WhichKeyDesc_rename = "<leader>cR  Quick List"
+
 :map <leader>cfc <Action>(ReformatCode)
+let g:WhichKeyDesc_reformat = "<leader>cfc  Reformat Code"
+
 :map <leader>sw <Action>(SurroundWith)
+
 :map <leader>ci <Action>(OptimizeImports)
+let g:WhichKeyDesc_importsOptimize = "<leader>ci  Optimize Imports"
 
 
 " stuff
   :map <leader>cjd <Action>(QuickJavaDoc)
+  let g:WhichKeyDesc_jd = "<leader>cjd  Quick Javadoc"
   :map <leader>ch <Action>(ShowErrorDescription)
+  let g:WhichKeyDesc_errorDesc = "<leader>ch  Show Error Description"
   :map <leader>cqi <Action>(QuickImplementations)
 
   " breakpoints
-  :map <leader>db <Action>(ToggleLineBreakpoint)
-  :map <leader>dlb <Action>(ViewBreakpoints)
-  :map <leader>drb <Action>(Debugger.RemoveAllBreakpoints)
 
   " comment out
   :map <leader>cc <Action>(CommentByLineComment)
@@ -70,18 +97,21 @@ map <leader>db <Action>(ToggleLineBreakpoint)
   :map fl <Action>(AceLineAction)
 
 " reactivate some IDEA shortcuts
-:map <c-n> <Action>(SearchEverywhere)
 :map gf <Action>(GotoFile)
 :map gr <Action>(ShowUsages)
 :map <c-s> <Action>(SaveAll)
 :map gi <Action>(GotoImplementation)
 
 " run stuff
+let g:WhichKeyDesc_run = "<leader>r Run"
+
 :map <leader>rc <Action>(ChooseRunConfiguration)
+let g:WhichKeyDesc_runConfig = "<leader>rc Choose Config"
 :map <leader>dc <Action>(ChooseDebugConfiguration)
 :map <leader>rs <Action>(Run)
-:map <leader>ds <Action>(Debug)
+let g:WhichKeyDesc_runSelected= "<leader>rs Run Currently Selected"
 :map <leader>S <Action>(Stop)
+let g:WhichKeyDesc_stop= "<leader>S Stop Running"
 
 " other things
 :sap <leader>ns <Action>(NewScratchFile)

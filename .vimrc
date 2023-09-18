@@ -1,4 +1,4 @@
-let mapleader = "<Space>"
+let mapleader = " "
 
 " plugins
 Plug 'tpope/vim-abolish'
@@ -34,6 +34,7 @@ set relativenumber
 set visualbell
 set idearefactormode=keep
 set showcmd
+set timeoutlen=6000
 
 " switch windows
 map <C-H> <C-W>h
@@ -61,50 +62,50 @@ imap jk <Esc>
 " change modifications
 
 " normal
-nnoremap <silent> c "_c
+nnoremap <silent> c "_c"
 nnoremap <silent> cx c
-nnoremap <silent> cc "_cc
+nnoremap <silent> cc "_cc"
 nnoremap <silent> ccx cc
-nnoremap <silent> C "_C
+nnoremap <silent> C "_C"
 nnoremap <silent> Cx C
 " visual
-vnoremap <silent> c "_c
+vnoremap <silent> c "_c"
 vnoremap <silent> cx c
-vnoremap <silent> cc "_cc
+vnoremap <silent> cc "_cc"
 vnoremap <silent> ccx cc
-vnoremap <silent> C "_C
+vnoremap <silent> C "_C"
 vnoremap <silent> Cx C
 " visual block
-xnoremap <silent> c "_c
+xnoremap <silent> c "_c"
 xnoremap <silent> cx c
-xnoremap <silent> cc "_cc
+xnoremap <silent> cc "_cc"
 xnoremap <silent> ccx cc
-xnoremap <silent> C "_C
+xnoremap <silent> C "_C"
 xnoremap <silent> Cx C
 
 " delete modifications
 
 " normal
-nnoremap <silent> d "_d
+nnoremap <silent> d "_d"
 nnoremap <silent> dx d
-nnoremap <silent> dd "_dd
+nnoremap <silent> dd "_dd"
 nnoremap <silent> ddx dd
-nnoremap <silent> D "_D
+nnoremap <silent> D "_D"
 nnoremap <silent> Dx D
 
 " visual
-vnoremap <silent> d "_d
+vnoremap <silent> d "_d"
 vnoremap <silent> dx d
-vnoremap <silent> dd "_dd
+vnoremap <silent> dd "_dd"
 vnoremap <silent> ddx dd
-vnoremap <silent> D "_D
+vnoremap <silent> D "_D"
 vnoremap <silent> Dx D
 " visual block
-xnoremap <silent> d "_d
+xnoremap <silent> d "_d"
 xnoremap <silent> dx d
-xnoremap <silent> dd "_dd
+xnoremap <silent> dd "_dd"
 xnoremap <silent> ddx dd
-xnoremap <silent> D "_D
+xnoremap <silent> D "_D"
 xnoremap <silent> Dx D
 
 " 'matt' commands

@@ -34,7 +34,6 @@ set relativenumber
 set visualbell
 set idearefactormode=keep
 set showcmd
-set timeoutlen=6000
 
 " switch windows
 map <C-H> <C-W>h

@@ -1,3 +1,4 @@
+
 let mapleader = "<Space>"
 
 
@@ -13,40 +14,122 @@ function! s:tmuxSplitHorizontal()
     call system(cmd)
 endfunction
 
+set scrolloff=5
+set clipboard+=unnamed
+set incsearch
+set hlsearch
+set scrolloff=999
+set ignorecase smartcase
+set showmode
+set history=1000
+set incsearch
+set clipboard+=unnamed
+set relativenumber
+set visualbell
+set idearefactormode=keep
+set showcmd
+set showmode                      
 
-nnoremap <silent> <leader>c "_c   " Change Without Cut
+" switch windows
+map <C-H> <C-W>h
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+
+nnoremap L gt
+noremap H gT
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+nmap Mx V:'<,'>t'><cr>
+vmap Mx V:'<,'>t'><cr>
+xmap Mx V:'<,'>t'><cr>
+
+" fix redo
+nnoremap U <C-r>
+vnoremap U <C-r>
+xnoremap U <C-r>
+
+imap jj <Esc>
+imap jk <Esc>
+
+" change modifications
+
+" normal
+nnoremap <silent> c "_c   " Change Without Cut
 nnoremap <silent> cx c           " Change With Cut
 nnoremap <silent> cc "_cc        " Change Without Cut
 nnoremap <silent> ccx cc         " Change With Cut
 nnoremap <silent> C "_C          " Change Without Cut
 nnoremap <silent> Cx C           " Change With Cut
+" visual
+vnoremap <silent> c "_c   " Change Without Cut
+vnoremap <silent> cx c           " Change With Cut
+vnoremap <silent> cc "_cc        " Change Without Cut
+vnoremap <silent> ccx cc         " Change With Cut
+vnoremap <silent> C "_C          " Change Without Cut
+vnoremap <silent> Cx C           " Change With Cut
+" visual block
+xnoremap <silent> c "_c   " Change Without Cut
+xnoremap <silent> cx c           " Change With Cut
+xnoremap <silent> cc "_cc        " Change Without Cut
+xnoremap <silent> ccx cc         " Change With Cut
+xnoremap <silent> C "_C          " Change Without Cut
+xnoremap <silent> Cx C           " Change With Cut
+
+" delete modifications
+
+" normal
 nnoremap <silent> d "_d          " Delete Without Cut
 nnoremap <silent> dx d           " Delete With Cut
 nnoremap <silent> dd "_dd        " Delete Without Cut
 nnoremap <silent> ddx dd         " Delete With Cut
 nnoremap <silent> D "_D          " Delete Without Cut
 nnoremap <silent> Dx D           " Delete With Cut
-nnoremap <silent> <leader>P :Telescope projects<CR>  " Project Management
-nnoremap <silent> <leader>v :OverseerToggle<CR>      " Overseer Toggle
-nnoremap <silent> U <C-r>         " Redo
-nnoremap <silent> H :bprevious<CR> " Go to previous buffer
-nnoremap <silent> L :bnext<CR>     " Go to next buffer
-nnoremap <silent> <Left> :tabprevious<CR>   " Go to previous tab
-nnoremap <silent> <Right> :tabNext<CR>     " Go to next tab
-nnoremap <silent> [t :tabnext<CR>          " Go to next tab
-nnoremap <silent> ]t> :tabnext<CR>         " Go to next tab
-nnoremap <silent> md V:'<,'>t'><CR>        " Duplicate Line
-nnoremap <silent> ms :%s/                " Global Substitute
-nnoremap <silent> mS :%S/                " Global Subvert
-nnoremap <silent> mc :%s/@+/             " Global Substitute Clipboard
-nnoremap <silent> mC :%S/@+/             " Global Subvert Clipboard
-nnoremap <silent> mp :put<CR>            " Paste On New Line Below
-nnoremap <silent> mP :put!<CR>           " Paste On New Line Above
-" nnoremap <silent> <leader>\ :call <SID>tmuxSplitVertical()<CR>   " New Vertical Tmux Pane At Buffer CWD
-" nnoremap <silent> <leader>| :call <SID>tmuxSplitHorizontal()<CR> " New Horizontal Tmux Pane At Buffer CWD
+
+" visual
+vnoremap <silent> d "_d          " Delete Without Cut
+vnoremap <silent> dx d           " Delete With Cut
+vnoremap <silent> dd "_dd        " Delete Without Cut
+vnoremap <silent> ddx dd         " Delete With Cut
+vnoremap <silent> D "_D          " Delete Without Cut
+vnoremap <silent> Dx D           " Delete With Cut
+" visual block
+xnoremap <silent> d "_d          " Delete Without Cut
+xnoremap <silent> dx d           " Delete With Cut
+xnoremap <silent> dd "_dd        " Delete Without Cut
+xnoremap <silent> ddx dd         " Delete With Cut
+xnoremap <silent> D "_D          " Delete Without Cut
+xnoremap <silent> Dx D           " Delete With Cut
+
+" 'matt' commands
+
+" normal
+nnoremap <silent> Ms :%s/                " Global Substitute
+nnoremap <silent> Mc :%s/@+/             " Global Substitute Clipboard
+nnoremap <silent> MC :%S/@+/             " Global Subvert Clipboard
+nnoremap <silent> Mp :put<CR>            " Paste On New Line Below
+nnoremap <silent> MP :put!<CR>           " Paste On New Line Above
+
+" visual
+vnoremap <silent> Ms :%s/                " Global Substitute
+vnoremap <silent> Mc :%s/@+/             " Global Substitute Clipboard
+vnoremap <silent> MC :%S/@+/             " Global Subvert Clipboard
+vnoremap <silent> Mp :put<CR>            " Paste On New Line Below
+vnoremap <silent> MP :put!<CR>           " Paste On New Line Above
+
+" visual block
+xnoremap <silent> Ms :%s/                " Global Substitute
+xnoremap <silent> Mc :%s/@+/             " Global Substitute Clipboard
+xnoremap <silent> MC :%S/@+/             " Global Subvert Clipboard
+xnoremap <silent> Mp :put<CR>            " Paste On New Line Below
+xnoremap <silent> MP :put!<CR>           " Paste On New Line Above
+
 nnoremap <silent> <Leader>Ay ggVGy     " Yank All
 nnoremap <silent> <Leader>Ad ggVGd     " Delete All
 nnoremap <silent> <Leader>Av ggVG      " Select All
+
+" edit helpers
 nnoremap <silent> bc VaB               " Block Select {}
 nnoremap <silent> bp Vab               " Block Select ()
 nnoremap <silent> bs Va[               " Block Select []
@@ -64,15 +147,9 @@ nnoremap <silent> bpd VabVd             " Block Delete ()
 nnoremap <silent> bsd Va[Vd             " Block Delete []
 nnoremap <silent> bxd Va<Vd             " Block Delete <>
 
-vnoremap jk <Esc>
-vnoremap jj <Esc>
-vnoremap p "_dP      " Better Paste
-vnoremap d "_d       " Delete Without Cut
-vnoremap dx d        " Delete With Cut
-vnoremap c "_c       " Change Without Cut
-vnoremap cx c        " Change With Cut
-vnoremap md :'<,'>t'><CR>   " Duplicate Selection
-vnoremap ms :s/             " Selection Substitute
-vnoremap mS :S/             " Selection Subvert
-vnoremap mc :%s/@+/         " Global Substitute Clipboard
-vnoremap mC :%S/@+/         " Global Subvert Clipboard
+
+Plug 'tpope/vim-abolish'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'

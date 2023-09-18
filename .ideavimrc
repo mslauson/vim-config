@@ -1,0 +1,97 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+" Do incremental searching.
+source ~/.vimrc
+
+set ideamarks=true
+" extensions
+set surround
+set multiple-cursors
+set highlightedyank
+set NERDTree
+set argtextobj
+
+
+Plug 'preservim/nerdtree'
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+nnoremap <leader>e :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Highlight copied text
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>r <Action>(ReformatCode)
+nnoremap ]d <Action>(GotoNextError)
+nnoremap [d <Action>(GotoPreviousError)
+
+"" Map <leader>d to start debug
+map <leader>dc <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map <leader>db <Action>(ToggleLineBreakpoint)
+
+" code Refactoring
+:map <leader>cr <Action>(RenameElement)
+:map <leader>cR <Action>(Refactorings.QuickListPopupAction)
+:map <leader>cfc <Action>(ReformatCode)
+:map <leader>sw <Action>(SurroundWith)
+:map <leader>ci <Action>(OptimizeImports)
+
+
+" stuff
+  :map <leader>cjd <Action>(QuickJavaDoc)
+  :map <leader>ch <Action>(ShowErrorDescription)
+  :map <leader>cqi <Action>(QuickImplementations)
+
+  " breakpoints
+  :map <leader>db <Action>(ToggleLineBreakpoint)
+  :map <leader>dlb <Action>(ViewBreakpoints)
+  :map <leader>drb <Action>(Debugger.RemoveAllBreakpoints)
+
+  " comment out
+  :map <leader>cc <Action>(CommentByLineComment)
+  :map <leader>tt <Action>(CommentByBlockComment)
+
+  " ace
+  :map ff <Action>(AceAction)
+  :map ft <Action>(AceTargetAction)
+  :map fl <Action>(AceLineAction)
+
+" reactivate some IDEA shortcuts
+:map <c-n> <Action>(SearchEverywhere)
+:map gf <Action>(GotoFile)
+:map gr <Action>(ShowUsages)
+:map <c-s> <Action>(SaveAll)
+:map gi <Action>(GotoImplementation)
+
+" run stuff
+:map <leader>rc <Action>(ChooseRunConfiguration)
+:map <leader>dc <Action>(ChooseDebugConfiguration)
+:map <leader>rs <Action>(Run)
+:map <leader>ds <Action>(Debug)
+:map <leader>S <Action>(Stop)
+
+" other things
+:sap <leader>ns <Action>(NewScratchFile)
+:map <leader>an <Action>(Annotate)
+
+" git
+:map <leader>gq <Action>(Vcs.QuickListPopupAction)
+:map <leader>gp <Action>(Vcs.Push)
+:map <leader>gl <Action>(Vcs.Log)
+:map <leader>gc <Action>(Vcs.Commit)
+:map <leader>gt <Action>(Vcs.UpdateProject)
+:map <leader>ga <Action>(Vcs.Add)
+
+nnoremap <leader>si :source ~/.ideavimrc<CR>

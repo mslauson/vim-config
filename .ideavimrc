@@ -17,6 +17,7 @@ set multiple-cursors
 set highlightedyank
 set NERDTree
 set argtextobj
+set which-key
 
 
 Plug 'preservim/nerdtree'
@@ -95,3 +96,8 @@ map <leader>db <Action>(ToggleLineBreakpoint)
 :map <leader>ga <Action>(Vcs.Add)
 
 nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+" buffers
+map <leader>bd <Action>(CloseEditor)
+map <leader>ba <Action>(CloseAllEditors)
+map <leader>bo <Action>(CloseAllEditorsButActive)

@@ -1,6 +1,12 @@
-
 let mapleader = "<Space>"
 
+" plugins
+Plug 'tpope/vim-abolish'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+Plug 'mg979/vim-visual-multi'
 
 function! s:tmuxSplitVertical()
     let buffer_directory = expand("%:p:h")
@@ -28,7 +34,6 @@ set relativenumber
 set visualbell
 set idearefactormode=keep
 set showcmd
-set showmode                      
 
 " switch windows
 map <C-H> <C-W>h
@@ -56,100 +61,94 @@ imap jk <Esc>
 " change modifications
 
 " normal
-nnoremap <silent> c "_c   " Change Without Cut
-nnoremap <silent> cx c           " Change With Cut
-nnoremap <silent> cc "_cc        " Change Without Cut
-nnoremap <silent> ccx cc         " Change With Cut
-nnoremap <silent> C "_C          " Change Without Cut
-nnoremap <silent> Cx C           " Change With Cut
+nnoremap <silent> c "_c
+nnoremap <silent> cx c
+nnoremap <silent> cc "_cc
+nnoremap <silent> ccx cc
+nnoremap <silent> C "_C
+nnoremap <silent> Cx C
 " visual
-vnoremap <silent> c "_c   " Change Without Cut
-vnoremap <silent> cx c           " Change With Cut
-vnoremap <silent> cc "_cc        " Change Without Cut
-vnoremap <silent> ccx cc         " Change With Cut
-vnoremap <silent> C "_C          " Change Without Cut
-vnoremap <silent> Cx C           " Change With Cut
+vnoremap <silent> c "_c
+vnoremap <silent> cx c
+vnoremap <silent> cc "_cc
+vnoremap <silent> ccx cc
+vnoremap <silent> C "_C
+vnoremap <silent> Cx C
 " visual block
-xnoremap <silent> c "_c   " Change Without Cut
-xnoremap <silent> cx c           " Change With Cut
-xnoremap <silent> cc "_cc        " Change Without Cut
-xnoremap <silent> ccx cc         " Change With Cut
-xnoremap <silent> C "_C          " Change Without Cut
-xnoremap <silent> Cx C           " Change With Cut
+xnoremap <silent> c "_c
+xnoremap <silent> cx c
+xnoremap <silent> cc "_cc
+xnoremap <silent> ccx cc
+xnoremap <silent> C "_C
+xnoremap <silent> Cx C
 
 " delete modifications
 
 " normal
-nnoremap <silent> d "_d          " Delete Without Cut
-nnoremap <silent> dx d           " Delete With Cut
-nnoremap <silent> dd "_dd        " Delete Without Cut
-nnoremap <silent> ddx dd         " Delete With Cut
-nnoremap <silent> D "_D          " Delete Without Cut
-nnoremap <silent> Dx D           " Delete With Cut
+nnoremap <silent> d "_d
+nnoremap <silent> dx d
+nnoremap <silent> dd "_dd
+nnoremap <silent> ddx dd
+nnoremap <silent> D "_D
+nnoremap <silent> Dx D
 
 " visual
-vnoremap <silent> d "_d          " Delete Without Cut
-vnoremap <silent> dx d           " Delete With Cut
-vnoremap <silent> dd "_dd        " Delete Without Cut
-vnoremap <silent> ddx dd         " Delete With Cut
-vnoremap <silent> D "_D          " Delete Without Cut
-vnoremap <silent> Dx D           " Delete With Cut
+vnoremap <silent> d "_d
+vnoremap <silent> dx d
+vnoremap <silent> dd "_dd
+vnoremap <silent> ddx dd
+vnoremap <silent> D "_D
+vnoremap <silent> Dx D
 " visual block
-xnoremap <silent> d "_d          " Delete Without Cut
-xnoremap <silent> dx d           " Delete With Cut
-xnoremap <silent> dd "_dd        " Delete Without Cut
-xnoremap <silent> ddx dd         " Delete With Cut
-xnoremap <silent> D "_D          " Delete Without Cut
-xnoremap <silent> Dx D           " Delete With Cut
+xnoremap <silent> d "_d
+xnoremap <silent> dx d
+xnoremap <silent> dd "_dd
+xnoremap <silent> ddx dd
+xnoremap <silent> D "_D
+xnoremap <silent> Dx D
 
 " 'matt' commands
 
 " normal
-nnoremap <silent> Ms :%s/                " Global Substitute
-nnoremap <silent> Mc :%s/@+/             " Global Substitute Clipboard
-nnoremap <silent> MC :%S/@+/             " Global Subvert Clipboard
-nnoremap <silent> Mp :put<CR>            " Paste On New Line Below
-nnoremap <silent> MP :put!<CR>           " Paste On New Line Above
+nnoremap <silent> Ms :%s/
+nnoremap <silent> Mc :%s/@+/
+nnoremap <silent> MC :%S/@+/
+nnoremap <silent> Mp :put<CR>
+nnoremap <silent> MP :put!<CR>
 
 " visual
-vnoremap <silent> Ms :%s/                " Global Substitute
-vnoremap <silent> Mc :%s/@+/             " Global Substitute Clipboard
-vnoremap <silent> MC :%S/@+/             " Global Subvert Clipboard
-vnoremap <silent> Mp :put<CR>            " Paste On New Line Below
-vnoremap <silent> MP :put!<CR>           " Paste On New Line Above
+vnoremap <silent> Ms :%s/
+vnoremap <silent> Mc :%s/@+/
+vnoremap <silent> MC :%S/@+/
+vnoremap <silent> Mp :put<CR>
+vnoremap <silent> MP :put!<CR>
 
 " visual block
-xnoremap <silent> Ms :%s/                " Global Substitute
-xnoremap <silent> Mc :%s/@+/             " Global Substitute Clipboard
-xnoremap <silent> MC :%S/@+/             " Global Subvert Clipboard
-xnoremap <silent> Mp :put<CR>            " Paste On New Line Below
-xnoremap <silent> MP :put!<CR>           " Paste On New Line Above
+xnoremap <silent> Ms :%s/
+xnoremap <silent> Mc :%s/@+/
+xnoremap <silent> MC :%S/@+/
+xnoremap <silent> Mp :put<CR>
+xnoremap <silent> MP :put!<CR>
 
-nnoremap <silent> <Leader>Ay ggVGy     " Yank All
-nnoremap <silent> <Leader>Ad ggVGd     " Delete All
-nnoremap <silent> <Leader>Av ggVG      " Select All
+nnoremap <silent> <Leader>Ay ggVGy
+nnoremap <silent> <Leader>Ad ggVGd
+nnoremap <silent> <Leader>Av ggVG
 
 " edit helpers
-nnoremap <silent> bc VaB               " Block Select {}
-nnoremap <silent> bp Vab               " Block Select ()
-nnoremap <silent> bs Va[               " Block Select []
-nnoremap <silent> sx Va<               " Block Select []
-nnoremap <silent> bcy VaBVy             " Block Yank {}
-nnoremap <silent> bpy VabVy             " Block Yank ()
-nnoremap <silent> bsy Va[Vy             " Block Yank []
-nnoremap <silent> bxy Va<Vy             " Block Yank <>
-nnoremap <silent> bcx VaBVx             " Block Cut {}
-nnoremap <silent> bpx VabVx             " Block Cut ()
-nnoremap <silent> bsx Va[Vx             " Block Cut []
-nnoremap <silent> bxx Va<Vx             " Block Cut <>
-nnoremap <silent> bcd VaBVd             " Block Delete {}
-nnoremap <silent> bpd VabVd             " Block Delete ()
-nnoremap <silent> bsd Va[Vd             " Block Delete []
-nnoremap <silent> bxd Va<Vd             " Block Delete <>
+nnoremap <silent> bc VaB
+nnoremap <silent> bp Vab
+nnoremap <silent> bs Va[
+nnoremap <silent> sx Va<
+nnoremap <silent> bcy VaBVy
+nnoremap <silent> bpy VabVy
+nnoremap <silent> bsy Va[Vy
+nnoremap <silent> bxy Va<Vy
+nnoremap <silent> bcx VaBVx
+nnoremap <silent> bpx VabVx
+nnoremap <silent> bsx Va[Vx
+nnoremap <silent> bxx Va<Vx
+nnoremap <silent> bcd VaBVd
+nnoremap <silent> bpd VabVd
+nnoremap <silent> bsd Va[Vd
+nnoremap <silent> bxd Va<Vd
 
-
-Plug 'tpope/vim-abolish'
-Plug 'machakann/vim-highlightedyank'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'easymotion/vim-easymotion'

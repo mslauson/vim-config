@@ -5,10 +5,12 @@
 
 
 "" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
+"  a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 " Do incremental searching.
 source ~/.vimrc
+
+
 
 set ideamarks=true
 set clipboard+=unnamed
@@ -20,6 +22,7 @@ set NERDTree
 set argtextobj
 set which-key
 set sneak
+set easymotion
 
 
 Plug 'preservim/nerdtree'
@@ -131,3 +134,21 @@ nnoremap <leader>si :source ~/.ideavimrc<CR>
 map <leader>bd <Action>(CloseEditor)
 map <leader>ba <Action>(CloseAllEditors)
 map <leader>bo <Action>(CloseAllEditorsButActive)
+
+
+" <Leader>f{char} to move to {char}
+let g:WhichKeyDesc_find= "<leader>f Find"
+map  <leader>fc <Plug>(easymotion-bd-f)
+nmap <leader>fc <Plug>(easymotion-overwin-f)
+let g:WhichKeyDesc_findChar= "<leader>fc Find char"
+
+" Move to line
+map <Leader>fl <Plug>(easymotion-bd-jk)
+nmap <Leader>fl <Plug>(easymotion-overwin-line)
+let g:WhichKeyDesc_findLine= "<leader>fl Find Line"
+
+" Move to word
+map  <Leader>fw <Plug>(easymotion-bd-w)
+nmap <Leader>fw <Plug>(easymotion-overwin-w)
+let g:WhichKeyDesc_findWord= "<leader>fw Find Word"
+

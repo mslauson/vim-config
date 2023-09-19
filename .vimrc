@@ -57,98 +57,100 @@ xnoremap U <C-r>
 
 imap jj <Esc>
 imap jk <Esc>
-
 " change modifications
 
 " normal
-nnoremap <silent> c "_c"
-nnoremap <silent> cx c
-nnoremap <silent> cc "_cc"
-nnoremap <silent> ccx cc
-nnoremap <silent> C "_C"
-nnoremap <silent> Cx C
+nnoremap  c "_c
+nnoremap ciw "_ciw
+nnoremap  cx c
+nnoremap  cc "_cc
+nnoremap  ccx cc
+nnoremap  C "_C
+nnoremap  Cx C
 " visual
-vnoremap <silent> c "_c"
-vnoremap <silent> cx c
-vnoremap <silent> cc "_cc"
-vnoremap <silent> ccx cc
-vnoremap <silent> C "_C"
-vnoremap <silent> Cx C
+vnoremap  c "_c
+vnoremap  cx c
+vnoremap  cc "_cc
+vnoremap  ccx cc
+vnoremap  C "_C
+vnoremap  Cx C
 " visual block
-xnoremap <silent> c "_c"
-xnoremap <silent> cx c
-xnoremap <silent> cc "_cc"
-xnoremap <silent> ccx cc
-xnoremap <silent> C "_C"
-xnoremap <silent> Cx C
+xnoremap  c "_c
+xnoremap  ciw "_ciw
+xnoremap  caw "_caw
+xnoremap  cx c
+xnoremap  cc "_cc
+xnoremap  ccx cc
+xnoremap  C "_C
+xnoremap  Cx C
 
 " delete modifications
 
 " normal
-nnoremap <silent> d "_d"
-nnoremap <silent> dx d
-nnoremap <silent> dd "_dd"
-nnoremap <silent> ddx dd
-nnoremap <silent> D "_D"
-nnoremap <silent> Dx D
+nnoremap  d "_d
+nnoremap  dx d
+nnoremap  dd "_dd
+nnoremap  ddx dd
+nnoremap  D "_D
+nnoremap  Dx D
 
 " visual
-vnoremap <silent> d "_d"
-vnoremap <silent> dx d
-vnoremap <silent> dd "_dd"
-vnoremap <silent> ddx dd
-vnoremap <silent> D "_D"
-vnoremap <silent> Dx D
+vnoremap  d "_d
+vnoremap  dx d
+vnoremap  dd "_dd
+vnoremap  ddx dd
+vnoremap  D "_D
+vnoremap  Dx D
 " visual block
-xnoremap <silent> d "_d"
-xnoremap <silent> dx d
-xnoremap <silent> dd "_dd"
-xnoremap <silent> ddx dd
-xnoremap <silent> D "_D"
-xnoremap <silent> Dx D
+xnoremap  d "_d
+xnoremap  dx d
+xnoremap  dd "_dd
+xnoremap  ddx dd
+xnoremap  D "_D
+xnoremap  Dx D
 
 " 'matt' commands
 
 " normal
-nnoremap <silent> Ms :%s/
-nnoremap <silent> Mc :%s/@+/
-nnoremap <silent> MC :%S/@+/
-nnoremap <silent> Mp :put<CR>
-nnoremap <silent> MP :put!<CR>
+nnoremap  Ms :%s/
+nnoremap  Mc :%s/@+/
+nnoremap  MC :%S/@+/
+nnoremap  Mp :put<CR>
+nnoremap  MP :put!<CR>
 
 " visual
-vnoremap <silent> Ms :%s/
-vnoremap <silent> Mc :%s/@+/
-vnoremap <silent> MC :%S/@+/
-vnoremap <silent> Mp :put<CR>
-vnoremap <silent> MP :put!<CR>
+vnoremap  Ms :%s/
+vnoremap  Mc :%s/@+/
+vnoremap  MC :%S/@+/
+vnoremap  Mp :put<CR>
+vnoremap  MP :put!<CR>
 
 " visual block
-xnoremap <silent> Ms :%s/
-xnoremap <silent> Mc :%s/@+/
-xnoremap <silent> MC :%S/@+/
-xnoremap <silent> Mp :put<CR>
-xnoremap <silent> MP :put!<CR>
+xnoremap  Ms :%s/
+xnoremap  Mc :%s/@+/
+xnoremap  MC :%S/@+/
+xnoremap  Mp :put<CR>
+xnoremap  MP :put!<CR>
 
-nnoremap <silent> <Leader>Ay ggVGy
-nnoremap <silent> <Leader>Ad ggVGd
-nnoremap <silent> <Leader>Av ggVG
+nnoremap  <Leader>Ay ggVGy
+nnoremap  <Leader>Ad ggVGd
+nnoremap  <Leader>Av ggVG
 
 " edit helpers
-nnoremap <silent> bc VaB
-nnoremap <silent> bp Vab
-nnoremap <silent> bs Va[
-nnoremap <silent> sx Va<
-nnoremap <silent> bcy VaBVy
-nnoremap <silent> bpy VabVy
-nnoremap <silent> bsy Va[Vy
-nnoremap <silent> bxy Va<Vy
-nnoremap <silent> bcx VaBVx
-nnoremap <silent> bpx VabVx
-nnoremap <silent> bsx Va[Vx
-nnoremap <silent> bxx Va<Vx
-nnoremap <silent> bcd VaBVd
-nnoremap <silent> bpd VabVd
-nnoremap <silent> bsd Va[Vd
-nnoremap <silent> bxd Va<Vd
+nnoremap  bc VaB
+nnoremap  bp Vab
+nnoremap  bs Va[
+nnoremap  sx Va<
+nnoremap  bcy VaBVy
+nnoremap  bpy VabVy
+nnoremap  bsy Va[Vy
+nnoremap  bxy Va<Vy
+nnoremap  bcx VaBVx
+nnoremap  bpx VabVx
+nnoremap  bsx Va[Vx
+nnoremap  bxx Va<Vx
+nnoremap  bcd VaBVd
+nnoremap  bpd VabVd
+nnoremap  bsd Va[Vd
+nnoremap  bxd Va<Vd
 
